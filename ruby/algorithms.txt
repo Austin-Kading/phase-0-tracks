@@ -1,0 +1,22 @@
+- When elevator doors open, go in and look at number pad.
+  - If lounge = 0
+	elevator stays put
+  - Else if any # > 0
+	elevator goes up to that number floor
+  - Else any # < 0
+	elevator goes down
+
+
+
+2.  Push up’s
+	# of pushups = 0
+
+ Until number of push ups gets to 5
+
+push up 1 + push up = 1
+push up 2 + push up = 2
+push up 3 + push up = 3
+push up 4 + push up = 4
+push up 5 + push up = 5
+
+push up’s: lay down belly first and keep elbows straight. Descend chest almost down to the floor then back up to straight elbow length.
