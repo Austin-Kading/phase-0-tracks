@@ -7,7 +7,7 @@ while number_of_employees >= 0
   print "What is your name? "
   name = gets.chomp
 
-  print "How old are you? "
+  print "How old are you?"
   age = gets.chomp.to_i
 
   print "What year were you born? "
