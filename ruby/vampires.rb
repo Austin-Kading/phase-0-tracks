@@ -28,6 +28,7 @@ while number_of_employees >= 0
   insurance = gets.chomp
 
   #This is will allow a "y" or "n" input
+  
   if insurance == "y"
     insurance = true
   elsif insurance == "n"
@@ -39,7 +40,7 @@ while number_of_employees >= 0
 
   #Vampire detection logic 
 
-  age_right = (2016 - year_born - age).abs <= 1
+  age_right = 2016 - year_born - age.abs <= 1
 
   if name == "Drake Cula" || name == "Tu Fang"
     puts "Definetely a vampire"
@@ -53,4 +54,19 @@ while number_of_employees >= 0
     puts "Results inconcluvise"
   end
   number_of_employees = number_of_employees - 1
+end
+  
+  #Allergy detection
+  
+
+  until response = gets.chomp
+    puts "Are there any allergies you could list? You can type done when finished"
+    response == "sunshine" || "done"
+  end
+  if response == "sunshine"
+    result = "Probably a vampire."
+  end
+
+  puts result
+  puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
 end
