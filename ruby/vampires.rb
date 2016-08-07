@@ -60,7 +60,7 @@ end
   
 
   until response = gets.chomp
-    puts "Are there any allergies you could list? You can type done when finished"
+    puts "Are there any allergies you could list? You can type done when finished."
     response == "sunshine" || "done"
   end
   if response == "sunshine"
