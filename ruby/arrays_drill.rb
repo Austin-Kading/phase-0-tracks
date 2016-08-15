@@ -54,12 +54,12 @@ school_bag.shift
 p school_bag
 
 # Ask array for a certain item.
-#p school_bag.include?("calculator") { |s| puts "#{s} is not in the back"}
+p school_bag.include?("calculator") 
 
 
-#p school_bag.fetch(10,"scissors") { |s| puts "#{s} is not in the back"}
+p school_bag.fetch(10,"scissors") { |s| puts "#{s} is not in the back"}
 
-#p school_bag.select{|item| "pens" == "pens"}
+p school_bag.select{|item| "pens" == "pens"}
 
 # New array with new items.
 in_lunchbox = ["apple", "banana", "peach"]
