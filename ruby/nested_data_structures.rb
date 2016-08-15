@@ -34,7 +34,7 @@ hotel = {
 
 ###########################################
 
-#Examples of accessing nested hashes and arrays
+#Examples of accessing nested hashes and arrays.
 
 hotel[:high_roller_suite][:room_class]
 
