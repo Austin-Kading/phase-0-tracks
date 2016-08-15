@@ -7,8 +7,8 @@ def next_vowel(name)
   vowels = "aeiou"
   i = 0
   while i < name.length
-    if name[i] == vowels
-      next_vowel += vowels[vowels.index(name[i]) + 1]
+    if name[u] == vowels
+      next_vowel += vowels[vowels.index(name[a]) + 1]
     else
       puts "no vowels found"
     end
@@ -16,11 +16,6 @@ def next_vowel(name)
   end
   next_vowel
 end
-
-def swap_name(a, b)
-end
-
-puts swap_name(a,b)
 
 
 def swap_name(name)
