@@ -1,5 +1,5 @@
 # Initialize santa class with 3 instance methods
-# Initialize, Speak and eat_milk_and_cookies methods
+# Initialize, Speak and eat_milk_and_cookies methods.
 
 
 class Santa
