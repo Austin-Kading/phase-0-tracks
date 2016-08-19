@@ -1,9 +1,17 @@
-class Puppy
 
-  def fetch(toy)
-    puts "I brought back the #{toy}!"
-    toy
+class Puppy
+  def initialize(name)
+    @name = name
   end
+  
+  def bark
+    puts "#{@name} says: Woof!"
+  end
+end
+
+
+# we make an array of names to build puppies with
+names = ["Fido", "Spot", "Duchess", "Ginger"] 
 
   def speak(i)
       while i > 0
@@ -79,6 +87,28 @@ end
 
 
 # # Release 0: Question 1.
+=======
+# we make an empty container for our puppy collection
+puppies = []
+
+puts "Iterating through names list to create puppies ..."
+names.each do |name|
+  puts "Creating a puppy named #{name} ..."
+  puppies << Puppy.new(name)
+  puts "There are now #{puppies.length} Puppy instances in the array"
+  puts "----"
+end
+    
+puts "Testing each Puppy instance in the array to make sure it can bark ..."
+puppies.each do |puppy|
+  puppies = Puppy.new(puppy)
+  p puppies
+end
+
+
+
+
+# # Release 0: Question 1
 # spot = Puppy.new
 # p spot.instance_of?(Puppy)
 # spot.fetch("ball")
@@ -100,6 +130,9 @@ end
 
 
 
+=======
+# Release 2: Write Your Own Class, and Experiment!
+>>>>>>> 45309a33647e887052a1dbef093c07220a8995d0
 
 
 

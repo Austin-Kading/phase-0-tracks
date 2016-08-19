@@ -1,42 +1,15 @@
-Review and Reflect week 5
+class Puppy
+  # Class variable that keeps track of how many animals there are in the class.
+  @@no_of_animals = 0
+  # Initializing multiple instances of the class
+    def initialize(name, color=nil, behavior, friendly)
+      @name = name
+      @color = color
+      @behavior = behavior
+      @friendly = friendly
+  end 
+end
 
-Data Structures
-1. Why are data structures useful in programming?
+# Assigning instances to Benji the dog
 
--Data structures are extremely important because they refer to the way we organize information which can have a lot of impact on the performance.
-
-Arrays
-2. Define "array" and describe the characteristics of an array.
-
-- An array is a list of data. In those lists you can have strings, booleans and integers or even all three. It’s kind of like if you wanted to make a shopping list. You can then assign these arrays to a variable or hash. Other than a shopping list you could also set a variable of a certain person and give it an array of their attributes if you wanted to.
-
-3. Give two original examples of data sets that an array might be well-suited for.
-
-- A data set that an array would be useful for would be different kinds of animal species. Another good use would be making a list of someones favorite things to do.
-
-Hashes
-4. Define "hash" and describe the characteristics of a hash.
-
-- Hashes use the {} brackets. Hashes organize data into key-value pairs.
-
-5. Give two original examples of data sets that a hash might be well-suited for.
-
-- Hashes are great to use with forms for people to fill out. It’s a good organized way to get the input from the user and store those values in keys. Another would be to use a hash to nest other data like describing a house.
-
-Iteration
-6. Why is iteration useful?
-
-- Iteration is useful because it is a way of searching. Which there is a lot of searching to do in the programming world.
-
-7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
-
-- Iteration takes place in almost everything in everyday life. For instance, If you were going to the store to look for a certain isle to a certain shelf to find that bag of sugar you wanted. This is using iteration.
-
-Blocks
-8. What is a block?
-
-- A block is a portable code that makes up it’s own little program.
-
-9. What is a block parameter, and where does its value come from?
-
-- |x| would be a block parameter and its value would depend on the method you are calling. You can name the block parameter anything you want. You also use an array with .each and put a block to it and get results of each array.
+Benji = Puppy.new("Benji","brown", "playful", "yes")
