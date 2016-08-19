@@ -19,6 +19,20 @@ def eat_milk_and_cookies(cookie)
   puts "That was a good #{cookie}!"
   end
 
+def santa_info
+  puts "Gender: #{@gender}"
+  puts "Ethnicity: #{@ethnicity}"
+  puts "Reindeer ranking: #{@reindeer_ranking}"
+  puts "Age: #{@age}"
+
+def age
+  @age
+end
+
+def ethnicity
+  @ethnicity
+end
+
 # Setter method that adds a year to santa
 def celebrate_birthday
   @age += 1
@@ -31,13 +45,15 @@ def get_mad_at(reindeer_name)
     @reindeer_ranking << reindeer_name
   end
 
-  def gender = (new_gender)
+  def gender(new_gender)
     @gender = new_gender
+  end
 end
+
 
 santa = Santa.new("male", "white")
 santa.speak
-santa.eat_milk_and_cookies
+santa.eat_milk_and_cookies("snickerdoodle")
 
 # Set empty santa array to get personal santa input from user
 
@@ -47,21 +63,14 @@ santa_clause = []
 gen = gets.chomp
   puts "And what's your ethnicity"
 eth = gets.chomp
+
 # santa_clause << Santa.new(gen, eth)
-
-
-<<<<<<< HEAD
-# gives examples of multiple instances for user to input as santa
-=======
-# # gives examples of multiple instances for user to input as santa
->>>>>>> master
 genders = ["male", "female", "agender", "bigender", "N/A"]
 ethnicities = ["white", "black", "latino", "japanese", "korean", "N/A"]
 
 santa_clause.length.times do |i|
   santa_clause << Santa.new(genders[i], ethnicities[i])
 end
-<<<<<<< HEAD
-=======
-p santa_clause
->>>>>>> master
+end
+end
+
