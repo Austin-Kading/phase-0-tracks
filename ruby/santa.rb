@@ -5,9 +5,10 @@
 class Santa
   def initialize(gender, ethnicity)
     @gender 
-    @ethnicity 
+    @ethnicity
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0 
+    @age = 0  
+    
   end
 # method that outputs what santa is saying
 def speak
@@ -39,18 +40,28 @@ santa.speak
 santa.eat_milk_and_cookies
 
 # Set empty santa array to get personal santa input from user
+
+
 santa_clause = []
-puts "Yo, what's your gender"
+  puts "Yo, what's your gender"
 gen = gets.chomp
-puts "And what's your ethnicity"
+  puts "And what's your ethnicity"
 eth = gets.chomp
-santa_clause = Santa.new(gen, eth)
+# santa_clause << Santa.new(gen, eth)
 
 
+<<<<<<< HEAD
 # gives examples of multiple instances for user to input as santa
+=======
+# # gives examples of multiple instances for user to input as santa
+>>>>>>> master
 genders = ["male", "female", "agender", "bigender", "N/A"]
 ethnicities = ["white", "black", "latino", "japanese", "korean", "N/A"]
 
 santa_clause.length.times do |i|
   santa_clause << Santa.new(genders[i], ethnicities[i])
 end
+<<<<<<< HEAD
+=======
+p santa_clause
+>>>>>>> master
