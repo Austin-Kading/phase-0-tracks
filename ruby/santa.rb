@@ -25,6 +25,7 @@ def santa_info
   puts "Reindeer ranking: #{@reindeer_ranking}"
   puts "Age: #{@age}"
 
+# Getter methods
 def age
   @age
 end
@@ -71,6 +72,5 @@ ethnicities = ["white", "black", "latino", "japanese", "korean", "N/A"]
 santa_clause.length.times do |i|
   santa_clause << Santa.new(genders[i], ethnicities[i])
 end
-end
-end
+
 
