@@ -71,3 +71,10 @@ add_item(list, "eggs")
 remove_item(list, "carrots")
 update_item(list, "pizza", 2)
 printing_list(list)
+
+
+
+# John Dees was my GPS guide
+# Laura Moreno was my partner
+# I really enjoyed working with both of them. I felt that Luara and I were on the same page when it came to working through problems.
+# Whenever we had a problem we took the time to look back at some of our work from the week before to figure it out.
