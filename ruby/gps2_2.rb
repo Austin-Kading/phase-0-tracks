@@ -55,7 +55,7 @@
     list
   end
 
-# Method to print a list and make it look pretty
+# Method to print a list and make it look pretty.
 # input: # the hash
 # steps: # iterate through items  
 # output: # prints as a statement
