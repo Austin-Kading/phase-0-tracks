@@ -51,7 +51,7 @@ def ethnicity
   @ethnicity
 end
 
-# Setter method that adds a year to santa
+# Setter method that adds a year to santa.
 def celebrate_birthday
   @age += 1
 end
