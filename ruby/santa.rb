@@ -22,6 +22,8 @@ class Santa
   end
 
   # Setter method that adds a year to santa.
+
+  # Setter method that adds a year to santa
   def celebrate_birthday
     @age += 1
   end
@@ -53,13 +55,11 @@ end
 def celebrate_birthday
   @age += 1
 end
->>>>>>> master
 
   def gender 
       @gender = gender
   end
 
-<<<<<<< HEAD
   def ethnicity
     @ethnicity = ethnicity
   end
