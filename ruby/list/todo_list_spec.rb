@@ -1,3 +1,6 @@
+# Rspec things to do
+require_relative 'todo'
+
 describe TodoList do
   let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
 
