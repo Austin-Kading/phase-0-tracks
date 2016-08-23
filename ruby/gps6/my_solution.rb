@@ -103,3 +103,18 @@ STATE_DATA.each do |states, state_data|
 end
 
 
+###David Reflection###
+#What are the differences between the two different hash syntaxes shown in the state_data file?
+# - The differences can be described in the states being a string key in the large hash with the value of the state key as another hash with keys of population and population density with values in their numbers.
+
+#What does require_relative do? How is it different from require?
+# - Require_relative allows you to use data from whatever ruby file you are requiring in the class or methods of the file that has require_relative in it.  This is different from require in the way that require allows you to state specific locations where classes and methods are located that you want to use; require_relative gives the file permission to use all classes and methods relative to that file.
+
+#What are some ways to iterate through a hash?
+# - You can iterate using .each, .delete, .fetch, .keep_if, .select, .reject.
+
+#When refactoring virus_effects, what stood out to you about the variables, if anything?
+# - I noticed that the variables were only set as instance variables and not passed in to the method as class variables.
+
+#What concept did you most solidify in this challenge?
+# - I think I solidified the concept of creating instances by iterating over a hash and calling methods from one class to another using require_relative.
