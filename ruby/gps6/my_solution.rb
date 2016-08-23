@@ -4,8 +4,9 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# giving the class the link to use the state_data file information
+# require relative is a compliment to the built in require method. 
+
 require_relative 'state_data'
 
 class VirusPredictor
