@@ -17,9 +17,10 @@ class VirusPredictor
     @population_density = population_density
   end
     # method is used to call on predicted deaths and speed of spread methods
+
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths(population_density, population, state)
+    speed_of_spread(population_density, state)
   end
 
   private
@@ -76,13 +77,13 @@ alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_densit
 alabama.virus_effects
 
 jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+#jersey.virus_effects
 
 california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
+#california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
+#alaska.virus_effects
 
 ### DRY Report for 50 States ###
 STATE_DATA.each do |states, state_data|
