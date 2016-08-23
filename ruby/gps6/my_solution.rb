@@ -18,9 +18,11 @@ class VirusPredictor
   end
     # method is used to call on predicted deaths and speed of spread methods
 
+
+
   def virus_effects
-    predicted_deaths(population_density, population, state)
-    speed_of_spread(population_density, state)
+    predicted_deaths(@population_density, @population, @state)
+    #speed_of_spread(@population_density, @state)
   end
 
   private
@@ -28,22 +30,31 @@ class VirusPredictor
     # predicts the number of deaths based on formula
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
+    speed = 0
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
+      speed += 0.5
     elsif @population_density >= 150
       number_of_deaths = (@population * 0.3).floor
+      speed += 1
     elsif @population_density >= 100
       number_of_deaths = (@population * 0.2).floor
+      speed += 1.5
     elsif @population_density >= 50
       number_of_deaths = (@population * 0.1).floor
+      speed += 2
     else
       number_of_deaths = (@population * 0.05).floor
+      speed += 2.5
     end
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
+    puts " and will spread across the state in #{speed} months.\n\n"
+
   end
     # Speed is calculated by the density in the state
+=begin
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -64,7 +75,7 @@ class VirusPredictor
     puts " and will spread across the state in #{speed} months.\n\n"
 
   end
-
+=end
 end
 
 #=======================================================================
@@ -90,4 +101,5 @@ STATE_DATA.each do |states, state_data|
   states = VirusPredictor.new(states, STATE_DATA[states][:population_density], STATE_DATA[states][:population])
   states.virus_effects
 end
+
 
