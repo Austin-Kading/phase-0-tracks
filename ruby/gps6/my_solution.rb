@@ -120,7 +120,7 @@ end
   # end
   # this is one way it iterate through a hash
   #frequencies.each { |key, value| puts "#{key} #{value}" } 
-  #that would also be another way of doing it
+  #that would also be another way of doing it.
 
 # When refactoring virus_effects, what stood out to you about the variables, if anything?
   # What stood out to me when refactoring those two was that both
