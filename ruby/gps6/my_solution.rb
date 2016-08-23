@@ -59,6 +59,9 @@ class VirusPredictor
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
+
+
+
     if @population_density >= 200
       speed += 0.5
     elsif @population_density >= 150
@@ -70,7 +73,12 @@ class VirusPredictor
     else
       speed += 2.5
     end
+
     puts " and will spread across the state in #{speed} months.\n\n"
+
+    puts " and will spread across the state in #{speed} months.\n\n"
+
+
   end
 =end
 end
@@ -98,6 +106,7 @@ STATE_DATA.each do |states, state_data|
   states = VirusPredictor.new(states, STATE_DATA[states][:population_density], STATE_DATA[states][:population])
   states.virus_effects
 end
+
 
 
 # Reflect
@@ -131,3 +140,4 @@ end
   # that we weren't using DRY. making things more short and readable
   # to be able to be organized and readable.
   
+
