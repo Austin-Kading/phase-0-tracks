@@ -24,7 +24,8 @@ class Dancer
   
 
   def begin_next_dance
-    puts "Now dancing with #{@card[0]}."
+    return "Now dancing with #{@card[0]}."
+    @card = @card.next
   end
 
 end
@@ -43,7 +44,7 @@ dancer = Dancer.new("Mikhail Baryshnikov", 32)
  dancer2 = Dancer.new("Anna Pavlova", 34)
  p dancer.queue_dance_with("Anna Pavlova")
  p dancer.begin_next_dance
- p dancer.card
+ p dancer.card[1]
  
    
 
