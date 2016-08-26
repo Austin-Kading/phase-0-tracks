@@ -18,11 +18,18 @@ class Dancer
     p action
   end
 
-  def queue_dance_with(add_dancer)
-    @card << add_dancer
+  def queue_dance_with(dancers)
+    @card << dancers
+  end
+  
+
+  def begin_next_dance
+    puts "Now dancing with #{@card[0]}."
   end
 
 end
+
+
 
 new_dancer = Dancer.new("Misty Copeland", 33)
 new_dancer.name
@@ -31,6 +38,16 @@ new_dancer.pirouette
 new_dancer.bow
 
 
-add_dancer = Dancer.new("Mikhail Baryshnikov", 34)
+dancer = Dancer.new("Mikhail Baryshnikov", 32)
+ p dancer.queue_dance_with("Mikhail Baryshnikov")
+ dancer2 = Dancer.new("Anna Pavlova", 34)
+ p dancer.queue_dance_with("Anna Pavlova")
+ p dancer.begin_next_dance
+ p dancer.card
+ 
+   
+
+
+
 
 
