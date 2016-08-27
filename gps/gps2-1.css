@@ -1,0 +1,23 @@
+body {
+	background-color: lightgreen;
+}
+
+.column-1 {
+  background-color: blue;
+  display: inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+
+.column-2 {
+  font-family: cursive;
+  background-color: red;
+  display:inline-block;
+  vertical-align: top;
+  width: 45%;
+}
+
+.column-2 h2 {
+  color: green;
+}
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -79,3 +80,6 @@ printing_list(list)
 # I really enjoyed working with both of them. I felt that Luara and I were on the same page when it came to working through problems.
 # Whenever we had a problem we took the time to look back at some of our work from the week before to figure it out.
 # I would love to work with these two again.
+=======
+
+>>>>>>> d867379d1f0e23b5bc495e3ffb775b839a8d4d60
