@@ -17,7 +17,7 @@
   end
 
   def disable_shield
-    action = "*Disabled*"
+     puts "*Disabled*"
   end
 
   def warp_to(location)
@@ -33,20 +33,49 @@
     item = item
     location = @current_location
     if item == item
-      @name.disable_shield
+      # Im trying to use the disable and enable method in here but i cant get
+      # it to work inside of this method
+      puts "#{@name.disable_shield}"
       @inventory << item
       @current_location << location
     if item.ord <= 500
       return true
-      print @name.enable_shield
+      print "#{@name.enable_shield}"
     else
      print false
       end
     end
   end
-
-  def pickup(item_descript, location)
     
+# Dont think this is how you wanted it but i cant get the last method to work
+    def pickup(item_descript, location)
+    puts "The ship is now warping to #{location} and using tractor beam to pick up a #{item_descript}"
+    @inventory << item_descript
+      end
+
+    # I think this is right but its not showing up 
+    def print_inventory
+       ship_str = ""
+    @inventory.each do |items|
+      ship_str << items.to_s.upcase
+      ship_str << "\n\n"
+      items.each do |item|
+        ship_str << item.to_s
+        ship_str << "\n"
+        end
+      ship_str << "\n"
+      end
+    ship_str
+    end
+
+    # Unfortunately i cant see this case i couldnt get my other method working
+    # but i think this would work
+    def cargo_weight
+      total_weight = 0
+    @inventory.each do |items|
+      total_weight += item.org
+    end
+    total_weight
   end
 end
 
@@ -56,7 +85,11 @@ end
   # Set location for 1 and 2 space ship
   spaceship1.warp_to("Venus")
   spaceship2.warp_to("Mars")
-  spaceship1.tractor_beam("cat")
+  # spaceship1.tractor_beam("cat")
+  spaceship1.pickup("moon","moon rock")
+  spaceship2.pickup("mars", "martian")
+  spaceship1.pickup("saturn", "space ball")
+  spaceship1.print_inventory
   # Change in driver code to demonstrate change in accessing
   # p spaceship1.name = ("UssAustin")
   # Updated driver code to make sure shield activation works
