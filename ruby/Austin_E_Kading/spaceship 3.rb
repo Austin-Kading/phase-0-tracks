@@ -12,7 +12,7 @@
       @inventory = []
     end
 
-  def enable_shield
+    def enable_shield
       action = "*Activated*"
   end
 
