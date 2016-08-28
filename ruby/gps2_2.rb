@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 87610692fddd1c60a7bafdd051144b59c5ed0d16
 # Method to create a list
 # input: string of items separated by spaces (example: "carrots apples cereal pizza")
 # steps: 
@@ -56,9 +60,15 @@
     list
   end
 
+<<<<<<< HEAD
 # Method to print a list and make it look pretty
 # input: # the hash
 # steps: # iterate through items  
+=======
+# Method to print a list and make it look pretty.
+# input: # the hash
+# steps: # iterate through items.  
+>>>>>>> 87610692fddd1c60a7bafdd051144b59c5ed0d16
 # output: # prints as a statement
   def printing_list(list)
     list.each { |item, quantity| puts "There is/are #{quantity} #{item} in your list." }
@@ -80,6 +90,9 @@ printing_list(list)
 # I really enjoyed working with both of them. I felt that Luara and I were on the same page when it came to working through problems.
 # Whenever we had a problem we took the time to look back at some of our work from the week before to figure it out.
 # I would love to work with these two again.
+<<<<<<< HEAD
 =======
 
 >>>>>>> d867379d1f0e23b5bc495e3ffb775b839a8d4d60
+=======
+>>>>>>> 87610692fddd1c60a7bafdd051144b59c5ed0d16
