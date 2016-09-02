@@ -12,4 +12,4 @@ A branch is a separate place other than your master project to make edits and pr
 A commit records changes to the repository. A good commit message will give a short and precise explanation to what changes have been made.
 
 * What is a merge conflict?
-A merge conflict happens when two branches are merged together with the same 2 copies of changes.
+A merge conflict happens when two branches are merged together with the same 2 copies of changes
