@@ -11,7 +11,7 @@
 2.  Push up’s
 	# of pushups = 0
 
- Until number of push ups gets to 5
+ Until number of push up’s gets to 5
 
 push up 1 + push up = 1
 push up 2 + push up = 2
