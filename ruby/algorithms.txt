@@ -1,10 +1,14 @@
 - When elevator doors open, go in and look at number pad.
-  - If lounge = 0
-	elevator stays put
-  - Else if any # > 0
-	elevator goes up to that number floor
-  - Else any # < 0
-	elevator goes down
+- Start “floor” counter at 0 floors and press floor 6.
+- Every time “floor” passes, until floor 6 is reached:
+	- say number of “floor” count
+	- add 1 to the “floor” count.
+if “floor” 6 is reached:
+ - walk out of elevator.
+elsif “floor” 6 is not reached:
+	- stand still
+
+
 
 
 
