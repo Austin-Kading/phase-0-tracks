@@ -35,7 +35,7 @@
       abort "Please choose (y or n)"
     end
 
-  Vampire detetion logic
+  # Vampire detetion logic
 
   age_right = 2016 - year_born - age.abs <= 1
 
@@ -52,6 +52,29 @@
   end
   num_of_employees = num_of_employees - 1
 end
+
+# Allergy detection
+  
+prompt = "> "
+puts "Name any allergies you have one by one or type done when finished."
+print prompt
+
+while user_input = gets.chomp # loop while getting user input
+  case user_input
+  when "sunshine"
+    puts "probably a vampire!"
+    break # make sure to break so you don't ask again
+  when "done"
+    puts "Exiting the program. Thank you for your time."
+    break 
+  end
+end
+
+puts ""
+puts "Actually, never mind! What do these questions have to do with anything?"
+puts "Let\'s all be friends."
+
+
 
 
 
