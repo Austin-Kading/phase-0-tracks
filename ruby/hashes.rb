@@ -20,3 +20,26 @@ client[:dec_theme] = gets.chomp
 
 # DRIVER CODE 
 p client
+
+# OPTION TO CHANGE ANY INPUT
+puts "Would you like to change any of this input?"
+puts "If not then just type 'none'."
+input = gets.chomp
+
+if input == "none"
+  puts "Goodbye"
+elsif input == "children" || input == "age"
+  client[input.to_sym] = gets.chomp.to_i
+elsif input == "name" || input == "dec_theme"
+  client[input.to_sym] = gets.chomp
+else
+  puts "You have not changed anything."
+end
+
+p client
+
+
+
+    
+
+
