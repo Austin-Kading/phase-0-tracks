@@ -1,49 +1,58 @@
-#Nested structure for hotel
+# Building ship hash with nested data structure
 
-hotel = {
-  honeymoon_suite: {
-    room_class: 'Best rooms in the building', 
-    room_info: {
-      total_rooms: 4,
-    },
-    perks: [
-      "Swimming pool on roof", 
-      "Champagne in the room",
-      "Free dinner in hotel restaurant"
-    ]
+ship = {
+  bottom_deck: {
+    living_quarters: {
+      total_beds: 10,
+      beds_used: 7
+      },
+      kitchen: [
+        'stew',
+        'salad',
+        'steak'
+      ]
   },
-  high_roller_suite: {
-    room_class: 'Second to best rooms in the building',
-    room_info: {
-      total_rooms: 5,
-    },
-    perks: [
-      "Access to swimming pool on roof",
-      "Good food delivery service",
-      "All paid for by the hotel"
-    ]
+  middle_deck: {
+    entertainment_deck: {
+      pool_tables: 3,
+      foozball_tables: 2
+      },
+      game_tables: [
+          'blackjack',
+          'poker',
+          'monopoly'
+      ]
   },
-  lower_floors: {
-    room_class: 'For the regular traveling folk',
-    room_info: {
-      total_rooms: 25,
+  top_deck: {
+    captains_quarters: {
+      captains: 1,
+      top_deck_crew: 5
     },
-    perks: []
+    crew_members: [
+      'Tony',
+      'Dick', 
+      'Jane',
+      'Stephen',
+      'Ben'
+    ]
   }
 }
 
-###########################################
+# DRIVER CODE TO ACCESS NESTED DATA
 
-#Examples of accessing nested hashes and arrays.
+p ship[:middle_deck][:game_tables]
+p ship[:top_deck][:crew_members][2] 
+ship[:top_deck][:crew_members][2] = 'Austin'
+p ship[:top_deck][:crew_members]
+ship[:bottom_deck][:kitchen].push('hamburgers')
+ship[:bottom_deck][:kitchen].push('hot dogs')
+ship[:bottom_deck][:kitchen].push('pork')
+p ship[:bottom_deck][:kitchen]
+p ship[:bottom_deck][:kitchen][3]
+p ship[:middle_deck][:entertainment_deck]
+ship[:middle_deck][:entertainment_deck][:pool_tables] = 5
+p ship[:middle_deck][:entertainment_deck]
+p ship[:top_deck][:crew_members]
+ship[:top_deck][:crew_members].delete('Tony')
+p ship[:top_deck][:crew_members]
 
-hotel[:high_roller_suite][:room_class]
-
-hotel[lower_floors][perks].push("Nothing really that great here")
-
-["Access to swimming pool on roof","Good food delivery service","All paid for by the hotel"].each_with_index do |item, index|
-       print "#{item} " if index%2==0
-     end
-
-hotel[:high_roller_suite][:perks][1]
-
-hotel[:high_roller_suite][:perks][2].swapcase
