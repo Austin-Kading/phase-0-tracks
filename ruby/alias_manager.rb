@@ -1,57 +1,14 @@
-# Method will swap first and last name of agent
-# Method will also change the vowels
+# Method that takes a real name and creates a fake name
+# Swapps the first and last name
+# Changes all the vowels to the next vowel in aeiou
+# and all of the consonents to the next consonant
 
-
-def next_vowel(name)
-  next_vowel = next_vowel
-  vowels = "aeiou"
-  i = 0
-  while i < name.length
-    if name[u] == vowels
-      next_vowel += vowels[vowels.index(name[a]) + 1]
-    else
-      puts "no vowels found"
-    end
-    i += 1
-  end
-  next_vowel
+def swapp_name(name)
+  reverse_name = name.split(' ')
+  reverse_name.reverse!
+  new_name = reverse_name.join(' ') 
+  p new_name
 end
 
-
-def swap_name(name)
-  puts " #{name}"
-end
-
-swap_name("Felicia Torres".reverse)
-
-vowels = ["a", "e", "i", "o", "u"]
-
-index = 0
-while index < vowels.length
-  puts "#{vowels[index] + 1}"
-  index += 1
-end
-
-
-
-
-###############################
-
- #User interface
- #User enters name to get a fake one
- puts "Please enter your name here"
-# #Get user input
- user_name = gets.chomp
-
- puts "Please enter what you would like your fake name to be."
- # User puts new name as input
- new_name = gets.chomp
-
- # stores new name as variable
- until "enter"
- if user_name == new_name
-   puts "Your new name is:" + "#{new_name}"
- else
-   puts "You must retry"
- end
+swapp_name('Austin Kading')
 
