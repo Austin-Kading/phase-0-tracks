@@ -13,16 +13,23 @@ end
 
 def next_vowel(str)
   vowels = ["a", "e", "i", "o", "u"]
-
+  consonents = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
   str = str.split('')
   str_new = str.map do |char|
     if vowels.include?(char)
       vowels.rotate(1)[vowels.index(char)]
+    elsif consonents.include?(char)
+      consonents.rotate(1)[consonents.index(char)]
     else
       char
     end
   end
   p str_new.join
+end
+
+def fake_name(name)
+  agent_name = next_vowel.reverse!
+  puts "Your new name is #{agent_name}."
 end
 
 
@@ -31,5 +38,8 @@ end
 # DRIVER CODE
 
 # swapp_name('Austin Kading')
-next_vowel('austin kading')
+# next_vowel('felicia torres')
+# next_consonant('austin kading')
+fake_name('austin kading')
+
 
