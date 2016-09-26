@@ -1,57 +1,56 @@
-# Method will swap first and last name of agent
-# Method will also change the vowels
+# Method that takes a real name and creates a fake name
 
+# Swapps the first and last name
+def swapp_name(name)
+  reverse_name = name.split(' ')
+  reverse_name.reverse!
+  new_name = reverse_name.join(' ')
+  new_name
+end
 
-def next_vowel(name)
-  next_vowel = next_vowel
-  vowels = "aeiou"
-  i = 0
-  while i < name.length
-    if name[u] == vowels
-      next_vowel += vowels[vowels.index(name[a]) + 1]
+# Changes all the vowels to the next vowel in aeiou
+# and all of the consonents to the next consonant
+
+def next_vowel(str)
+  vowels = ["a", "e", "i", "o", "u"]
+  consonents = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+  str = str.split('')
+  str_new = str.map do |char|
+    if vowels.include?(char)
+      vowels.rotate(1)[vowels.index(char)]
+    elsif consonents.include?(char)
+      consonents.rotate(1)[consonents.index(char)]
     else
-      puts "no vowels found"
+      char
     end
-    i += 1
   end
-  next_vowel
+  str_new.join
 end
 
-
-def swap_name(name)
-  puts " #{name}"
-end
-
-swap_name("Felicia Torres".reverse)
-
-vowels = ["a", "e", "i", "o", "u"]
-
-index = 0
-while index < vowels.length
-  puts "#{vowels[index] + 1}"
-  index += 1
+def fake_name(name)
+  agent_name = swapp_name(next_vowel(name))
+  puts "Your new name is #{agent_name}."
 end
 
 
 
+# DRIVER CODE
 
-###############################
+# swapp_name('Austin Kading')
+# next_vowel('felicia torres')
+# next_consonant('austin kading')
+fake_name('austin kading')
 
- #User interface
- #User enters name to get a fake one
- puts "Please enter your name here"
-# #Get user input
- user_name = gets.chomp
+# USER INTERFACE
 
- puts "Please enter what you would like your fake name to be."
- # User puts new name as input
- new_name = gets.chomp
+puts "Enter your name and we will give you your alias name."
+puts "Just type 'quit' when you are finished."
+alias_name = user_input(fake_name(name))
 
- # stores new name as variable
- until "enter"
- if user_name == new_name
-   puts "Your new name is:" + "#{new_name}"
- else
-   puts "You must retry"
- end
-
+while user_input = gets.chomp
+  if user_input
+    puts "Your new alias name is: #{alias_name}"
+  elsif user_input == "quit"
+    break
+  end
+end
