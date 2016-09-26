@@ -4,8 +4,8 @@
 def swapp_name(name)
   reverse_name = name.split(' ')
   reverse_name.reverse!
-  new_name = reverse_name.join(' ') 
-  p new_name
+  new_name = reverse_name.join(' ')
+  new_name
 end
 
 # Changes all the vowels to the next vowel in aeiou
@@ -24,14 +24,13 @@ def next_vowel(str)
       char
     end
   end
-  p str_new.join
+  str_new.join
 end
 
 def fake_name(name)
-  agent_name = next_vowel.reverse!
+  agent_name = swapp_name(next_vowel(name))
   puts "Your new name is #{agent_name}."
 end
-
 
 
 
@@ -42,4 +41,16 @@ end
 # next_consonant('austin kading')
 fake_name('austin kading')
 
+# USER INTERFACE
 
+puts "Enter your name and we will give you your alias name."
+puts "Just type 'quit' when you are finished."
+alias_name = user_input(fake_name(name))
+
+while user_input = gets.chomp
+  if user_input
+    puts "Your new alias name is: #{alias_name}"
+  elsif user_input == "quit"
+    break
+  end
+end
