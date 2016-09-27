@@ -31,4 +31,25 @@ end
 
 p fib(6)
 
+
+
+def bubble(list)
+  return list if list.size <= 1 # already sorted
+
+  loop do
+    swapped = false
+    0.upto(list.size-2) do |i|
+      if list[i] > list[i+1]
+        list[i], list[i+1] = list[i+1], list[i] # swap values
+        swapped = true
+      end
+    end
+    break unless swapped
+  end
+
+  p list
+end
+
+bubble([2,5,8,4,5,9])
+
   
