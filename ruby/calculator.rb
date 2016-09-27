@@ -20,16 +20,26 @@ end
 # p calculate(4, '/', 5)
 # p calculate(4, '*', 5)
 
-def request_calc(a, operator, b)
-  puts "What calculation would you like to perform?"
-  user_calc = request_calc(calculate(a, operator, b))
-   answer
-end
-
 # CREATE USER INTERFACE
 
-# puts "What calculation would you like to perfom?"
-# p calculate(a, operator, b)
 
-request_calc
+# I can't figure out how to get my loop to break properly
+# Going to bring it into office hours
+def request_calc
+  while true
+    puts "What calculation would you like to perform?"
+    puts "Type 'done' when you have finished."
+    operator = gets.chomp
+    puts "A #{operator} B. A = ?"
+    a = gets.chomp
+    puts "#{a} #{operator} B. B = ?"
+    b = gets.chomp
+    answer = calculate(a.to_i, operator, b.to_i)
+    puts "#{a} #{operator} #{b} = #{answer}"
+    false == "done"
+    break
+  end
+end
+
+p request_calc
 
