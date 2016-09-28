@@ -63,33 +63,35 @@ class Athlete
   end
 end
 
-athletes = ["Tom", "Sherman", "Brady", "Tray"] 
+athletes = ["Tom", "Sherman", "Brady", "Tray"]
+kick_balls = ["Football","Baseball","Golf Ball","Soccer Ball"]
+sports = ["Baseball", "Soccer", "Football", "Golf"] 
 
  stadium = []
 
   puts "Iterating through names list to enter into stadium ..."
 
-  n = 0
+ 50.times do
+   new_athlete = Athlete.new(athletes.sample,rand(50), sports.sample)
+   athletes << new_athlete
+   stadium << athletes
+ end
 
-  while n < 49
-    puts "------------------------------"
-    n = athletes.length
-    athletes.push('Rivers')
-    p athletes
-    puts "-------------------------------"
-  end
+ athletes.each do |athlete|
+   athlete.greet
+ end
 
-  athletes.each do |name|
+  athlete.each do |name|
     puts "#{athletes.join(", ")}"
     puts "are now entering the stadium and the crowd is roaring!"
-    stadium << Athlete.new(name, 30, "football").kick(football, 50)
+    stadium << Athlete.new(athletes, rand(30), kick_balls.sample)
     puts "There are now #{athletes.length} in the stadium."
       puts "-------------------------------"
   end
 
 
 
-p athletes
-player = Athlete.new("Jeremy", 25, "Football")
-#player.greet
+# p athletes.kick(kick_balls.sample, rand(1..100))
+# player = Athlete.new("Jeremy", 25, "Football")
+# player.greet
 #player.kick("football", 50)
