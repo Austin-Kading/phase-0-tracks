@@ -10,6 +10,15 @@ class Santa
     @age = 0
   end
 
+  def print_santa
+    puts "--------------------"
+    puts "Current santa configuration:\n"
+    puts "Gender ---> #{@gender}"
+    puts "Ethnicity ---> #{@ethnicity}"
+    puts "Age ---> #{@age}"
+    puts "-------------------"
+  end
+
   def speak
     puts "Ho, ho, ho! Haaaaaappy holidays!"
   end
@@ -20,9 +29,27 @@ class Santa
 
 end
 
+santas = []
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "transsexual", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+example_genders.length.times do 
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
+
+santas.each do |santa|
+  santa.print_santa
+end
+
+
+
+
 
 # DRIVER CODE
 
-santa = Santa.new
-santa.speak
-santa.eat_milk_and_cookies("peanut butter")
+# santa = Santa.new("male", "White")
+# santa.speak
+# santa.eat_milk_and_cookies("peanut butter")
+# p santa
+
+
