@@ -1,138 +1,97 @@
+# class Puppy
 
-class Puppy
-  def initialize(name)
-    @name = name
-  end
-  
-  def bark
-    puts "#{@name} says: Woof!"
-  end
-end
+#    def fetch(toy)
+#      puts "I brought back the #{toy}!"
+#      toy
+#    end
 
+#    def speak(int)
+#       int.times do |woof|
+#         p "WOOF!!"
+#       end
+#    end
 
-# we make an array of names to build puppies with
-names = ["Fido", "Spot", "Duchess", "Ginger"] 
+#    def roll_over
+#       puts "*rolls over*"
+#    end
 
-  def speak(i)
-      while i > 0
-        puts "Woof"
-        i -= 1
-      end
-    end
+#    def dog_years(h)
+#       y = h / 4
+#       p y
+#    end
 
-  def rollover
-    puts "Rollover!"
-  end
+#    def high_five
+#       puts "*Paw Shake*"
+#    end
 
-  def dog_years(h)
-    y = h / 4
-    puts "#{h} human years equals #{y} dog years"
-  end
+# end
 
-  def talk
-    puts "Tell the dog your name!"
-    name = gets.chomp
-    puts "Dog: Rerro #{name}! Woof!"
-  end
-
-  def initialize
-    puts "Initializing new puppy instance ..."
-  end
-
-end
-
-
-# ----------------------------------------------------
-
-class Tree
-  def initialize(name)
-    puts "Initializing new puppy instance ..."
-  end
-  
-  def climb
-    puts "You are climbing the tree!"
-  end
-end
-
-# Release 2: Write Your Own Class, and Experiment!
-
-# we make an array of kid's names to climb the tree with.
-kids_names = ["Tom", "Jane", "Precious", "Tray"] 
-
-# we make an empty container for our forest. 
-forest = []
-
-puts "Iterating through names list to enter into forest ..."
-
-n = 0
-
-while n < 49
-  n = kids_names.length
-  kids_names.push('a')
-  p kids_names
-end
-
-kids_names.each do |name|
-  puts "#{kids_names} went into the forest..."
-  forest << Tree.new(name)
-  puts "There are now #{forest.length} kid instances in the array"
-  puts "----"
-end
-
-    
-puts "Testing each kid instance in the array to make sure it can climb the tree ..."
-forest.each do |kid|
-  kid.climb
-end
-
-
-# # Release 0: Question 1.
-=======
-# we make an empty container for our puppy collection
-puppies = []
-
-puts "Iterating through names list to create puppies ..."
-names.each do |name|
-  puts "Creating a puppy named #{name} ..."
-  puppies << Puppy.new(name)
-  puts "There are now #{puppies.length} Puppy instances in the array"
-  puts "----"
-end
-    
-puts "Testing each Puppy instance in the array to make sure it can bark ..."
-puppies.each do |puppy|
-  puppies = Puppy.new(puppy)
-  p puppies
-end
-
-
-
-
-# # Release 0: Question 1
 # spot = Puppy.new
-# p spot.instance_of?(Puppy)
 # spot.fetch("ball")
+# spot.speak(7)
+# spot.roll_over
+# spot.dog_years(30)
+# spot.high_five
 
-# # Release 0: Question 2
-# spot.speak(3)
+#--------------------------------------------
 
-# # Release 0: Question 3
-# spot.rollover
+class Athlete
+  
+  def initialize(name, age, sport)
+    @name = name 
+    @age = age
+    @sport = sport
+  end
 
-# # Release 0: Question 4
-# spot.dog_years(40)
+  def greet
+    puts "Hello my name is #{@name}, I am #{@age}, and my sport is #{@sport}."
+  end
 
-# # Release 0: Question 5
-# spot.talk
-
-
-
-
-
-
-=======
-# Release 2: Write Your Own Class, and Experiment!
->>>>>>> 45309a33647e887052a1dbef093c07220a8995d0
-
+  # Release 2: Write Your Own Class, and Experiment!
 
 
+  def kick(ball, distance)
+    i = 1
+    puts "#{@name} will kick the #{ball} #{distance} yards."
+    while i < 5 
+      if i >= 0
+      puts "#{@name} has kicked the #{ball} #{distance} yards away!"
+      puts "The #{ball} has be kicked #{i} times."
+      i += 1
+      end
+    end 
+  end
+end
+
+athletes = ["Tom", "Sherman", "Brady", "Tray"]
+kick_balls = ["Football","Baseball","Golf Ball","Soccer Ball"]
+sports = ["Baseball", "Soccer", "Football", "Golf"] 
+
+ stadium = []
+
+  puts "Iterating through names list to enter into stadium ..."
+
+ 50.times do
+   new_athlete = Athlete.new(athletes.sample,rand(50), sports.sample)
+   athletes << new_athlete
+   stadium << athletes
+ end
+
+ athletes.each do |athlete|
+   athlete.greet
+ end
+
+  athlete.each do |name|
+    puts "#{athletes.join(", ")}"
+    puts "are now entering the stadium and the crowd is roaring!"
+    stadium << Athlete.new(athletes, rand(30), kick_balls.sample)
+    puts "There are now #{athletes.length} in the stadium."
+      puts "-------------------------------"
+  end
+
+
+
+# p athletes.kick(kick_balls.sample, rand(1..100))
+# player = Athlete.new("Jeremy", 25, "Football")
+# player.greet
+#player.kick("football", 50)
