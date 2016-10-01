@@ -2,6 +2,8 @@
 # Add instance methods to santa class
 
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
 
   def initialize(gender, ethnicity)
     @gender = gender
@@ -28,7 +30,7 @@ class Santa
     puts "That was a good #{cookie} cookie!"
   end
 
-  # ATTRIBUTE CHANGING METHODS
+  # SETTER METHODS
   def celebrate_birthday
     @age += 1
   end
@@ -36,6 +38,15 @@ class Santa
   def gender(new_gender)
    @gender = new_gender
   end
+
+  # GETTER METHODS
+  # def age
+  #    @age
+  # end
+
+  # def ethnicity
+  #   @ethnicity
+  # end
 
   def get_mad_at(reindeer_name)
      if i = @reindeer_ranking.index(reindeer_name)
@@ -45,7 +56,7 @@ class Santa
   end
 
   
- end
+  end
 end
 
 # santas = []
@@ -69,9 +80,11 @@ end
 santa = Santa.new("male", "White")
 # santa.speak
 # santa.eat_milk_and_cookies("peanut butter")
-santa.celebrate_birthday
+# santa.celebrate_birthday
 santa.gender("female")
-santa.get_mad_at("Rudolph")
+# santa.get_mad_at("Rudolph")
+p santa.age
+p santa.ethnicity
 santa.print_santa
 
 
