@@ -59,32 +59,51 @@ class Santa
   end
 end
 
-# santas = []
+#############################################
 
-# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "transsexual", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+santas = []
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "transsexual", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 # example_genders.length.times do 
 #   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 # end
 
-# santas.each do |santa|
-#   santa.print_santa
-# end
+100.times do
+  santas << Santa.new(example_genders.sample,example_ethnicities.sample)
+end
 
 
+santas.each do |santa|
+  santa.print_santa
+end
 
+puts "+++++++++++++++++++++"
+counter = 1
+while counter < santas.length
+  santas.each do |santa|
+  puts "There are now #{counter} new santas."
+  counter += 1
+ end
+end
+puts "+++++++++++++++++++++"
+
+
+#############################################
 
 
 # DRIVER CODE
 
-santa = Santa.new("male", "White")
+# santa = Santa.new("male", "White")
 # santa.speak
 # santa.eat_milk_and_cookies("peanut butter")
 # santa.celebrate_birthday
-santa.gender("female")
+# santa.gender("female")
 # santa.get_mad_at("Rudolph")
-p santa.age
-p santa.ethnicity
-santa.print_santa
+# p santa.age
+# p santa.ethnicity
+# santa.print_santa
+
+#############################################
 
 
