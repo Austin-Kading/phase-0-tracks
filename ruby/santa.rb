@@ -12,7 +12,8 @@ class Santa
 
   def print_santa
     puts "--------------------"
-    puts "Current santa configuration:\n"
+    puts "Current santa configuration:"
+    puts
     puts "Gender ---> #{@gender}"
     puts "Ethnicity ---> #{@ethnicity}"
     puts "Age ---> #{@age}"
@@ -27,19 +28,37 @@ class Santa
     puts "That was a good #{cookie} cookie!"
   end
 
+  # ATTRIBUTE CHANGING METHODS
+  def celebrate_birthday
+    @age += 1
+  end
+
+  def gender(new_gender)
+   @gender = new_gender
+  end
+
+  def get_mad_at(reindeer_name)
+     if i = @reindeer_ranking.index(reindeer_name)
+      @reindeer_ranking.delete_at(i)
+      @reindeer_ranking << reindeer_name
+      p @reindeer_ranking
+  end
+
+  
+ end
 end
 
-santas = []
+# santas = []
 
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "transsexual", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-example_genders.length.times do 
-  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
-end
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "transsexual", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# example_genders.length.times do 
+#   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+# end
 
-santas.each do |santa|
-  santa.print_santa
-end
+# santas.each do |santa|
+#   santa.print_santa
+# end
 
 
 
@@ -47,9 +66,12 @@ end
 
 # DRIVER CODE
 
-# santa = Santa.new("male", "White")
+santa = Santa.new("male", "White")
 # santa.speak
 # santa.eat_milk_and_cookies("peanut butter")
-# p santa
+santa.celebrate_birthday
+santa.gender("female")
+santa.get_mad_at("Rudolph")
+santa.print_santa
 
 
