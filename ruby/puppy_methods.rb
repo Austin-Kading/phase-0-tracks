@@ -1,37 +1,37 @@
-# class Puppy
+class Puppy
 
-#    def fetch(toy)
-#      puts "I brought back the #{toy}!"
-#      toy
-#    end
+   def fetch(toy)
+     puts "I brought back the #{toy}!"
+     toy
+   end
 
-#    def speak(int)
-#       int.times do |woof|
-#         p "WOOF!!"
-#       end
-#    end
+   def speak(int)
+      int.times do |woof|
+        p "WOOF!!"
+      end
+   end
 
-#    def roll_over
-#       puts "*rolls over*"
-#    end
+   def roll_over
+      puts "*rolls over*"
+   end
 
-#    def dog_years(h)
-#       y = h / 4
-#       p y
-#    end
+   def dog_years(h)
+      y = h / 4
+      p y
+   end
 
-#    def high_five
-#       puts "*Paw Shake*"
-#    end
+   def high_five
+      puts "*Paw Shake*"
+   end
 
-# end
+end
 
-# spot = Puppy.new
-# spot.fetch("ball")
-# spot.speak(7)
-# spot.roll_over
-# spot.dog_years(30)
-# spot.high_five
+spot = Puppy.new
+spot.fetch("ball")
+spot.speak(7)
+spot.roll_over
+spot.dog_years(30)
+spot.high_five
 
 #--------------------------------------------
 
@@ -98,7 +98,7 @@ end
 
 
 
-# p athletes.kick(kick_balls.sample, rand(1..100))
-# player = Athlete.new("Jeremy", 25, "Football")
-# player.greet
-#player.kick("football", 50)
+p athletes.kick(kick_balls.sample, rand(1..100))
+player = Athlete.new("Jeremy", 25, "Football")
+player.greet
+player.kick("football", 50)
