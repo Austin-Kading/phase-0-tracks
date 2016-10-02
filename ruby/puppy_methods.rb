@@ -69,25 +69,32 @@ sports = ["Baseball", "Soccer", "Football", "Golf"]
 
  stadium = []
 
+ puts stadium
+
   puts "Iterating through names list to enter into stadium ..."
 
  50.times do
    new_athlete = Athlete.new(athletes.sample,rand(50), sports.sample)
-   athletes << new_athlete
-   stadium << athletes
+   stadium << new_athlete
  end
 
- athletes.each do |athlete|
+ stadium.each do |athlete|
    athlete.greet
  end
 
-  athlete.each do |name|
-    puts "#{athletes.join(", ")}"
-    puts "are now entering the stadium and the crowd is roaring!"
-    stadium << Athlete.new(athletes, rand(30), kick_balls.sample)
-    puts "There are now #{athletes.length} in the stadium."
+ puts "+++++++++++++++++++++++++++++"
+ counter = 1
+ while counter < stadium.length
+  stadium.each do |name|
+    puts "#{athletes.sample}"
+    puts "is now entering the stadium and the crowd is roaring!"
+    puts "There are now #{counter} in the stadium."
       puts "-------------------------------"
+      counter += 1
   end
+end
+
+  puts "+++++++++++++++++++++++++++++"
 
 
 
