@@ -17,23 +17,41 @@ class Hangman
 
   def check_letter(char)
     @guess_count += 1
+    max_guesses = @word.length
      if @word.include?(char)
-      puts "The word contains #{char}."
-     else
-    puts "wrong letter try again."
-    end
+     puts "The word contains #{char}."
+     elsif
+     puts "wrong letter try again."
+     elsif max_guesses
+     puts "Sorry your all out of guesses"
+     @is_over = true
+    else
+    false
+   end
+    char
   end
 
   def current_state
     @progress * @word.length
+    if hangman.check_letter(char) == word(char)
+      @progress += word(char)
+    else
+      @progress
+    end
   end
-end
 
    def num_of_guesses
-    max_guesses = @word.length
+     max_guesses = @word.length
    end
+end
 
-   
+  
+
+ # sorry the game is not finished.
+ # i spent too much time on the other modules
+ # and didnt leave enough time to finish this one
+ # im gonna submit this now then re-submit when finished
+ # thank you  
 
    
 
@@ -42,15 +60,15 @@ end
 
 # USER INTERFACE
 
-# puts "Welcome to the hangman game!"
+puts "Welcome to the hangman game!"
 game = Hangman.new
 
-# puts "What word do you choose for your opponent to guess?"
-# game_word = game.user_word(gets.chomp.downcase)
+puts "What word do you choose for your opponent to guess?"
+game_word = game.user_word(gets.chomp.downcase)
 
  # p game.random_choice
-  p game.game_word("austin")
-  p game.current_state
+  # p game.game_word("austin")
+  # p game.current_state
   #  game.word
   # p game.check_letter("a")
   # p game.current_state
@@ -58,4 +76,4 @@ game = Hangman.new
  
 
 # game = Hangman.new
-# p game.user_word("katie")
+# p game.user_word("austin")
