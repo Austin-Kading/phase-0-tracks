@@ -1,0 +1,43 @@
+1.Display the information in one table (either table is fine).
+input:SELECT * FROM animals;
+
+output: 
+1|Tarantula|3|false
+2|Black widow|2|true
+3|Viper|4|true
+4|Python|7|false
+
+2.Update an item that meets some condition (you can choose a condition that makes sense).
+
+input: UPDATE animals SET violant="true" WHERE name="Python";
+
+output: Tarantula|false|1
+Black widow|true|1
+Python|true|2
+
+
+
+3.Display the information in both tables using one query.
+
+input: SELECT * FROM animals, species WHERE animals.specie_id = species.id;
+
+output: 
+Tarantula|false|1|1|Spider
+Black widow|true|1|1|Spider
+Rattlesnake|true|2|2|Snake
+Python|false|2|2|Snake
+
+4.Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+input: SELECT * FROM animals, species WHERE animals.specie_id = species.id;
+
+output:
+Tarantula|false|1|1|Spider
+
+5.Delete an item that meets some condition (you can choose a condition that makes sense).
+
+input: SELECT * FROM animals;
+
+output:Tarantula|false|1
+Black widow|true|1
+Python|false|2
