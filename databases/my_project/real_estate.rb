@@ -34,3 +34,29 @@ create_houses_table = <<-SQL
     FOREIGN KEY (area_id) REFERENCES locations(id)
   )
 SQL
+
+# Create the tables
+db.execute(create_locations_table)
+db.execute(create_clients_table)
+db.execute(create_houses_table)
+
+# Add a user interface
+puts "Are you buying or selling today?  Please enter B or S:"
+input = gets.chomp.downcase
+client_type = input == "b" ? "buyer": "seller"
+
+if client_type == "buyer"
+  client_id = get_client_info(db)
+  display_matches(db, client_id)
+else
+  until input == "quit"
+    puts "Which table would you like to update (enter H for houses, L for locations or 'quit' to quit):"
+    input = gets.chomp.downcase
+
+    if input == "l"
+      update_locations(db)
+    elsif input == "h"
+      update_houses(db)
+    end
+  end
+end
