@@ -23,3 +23,14 @@ create_clients_table = <<-SQL
     FOREIGN KEY (area_id) REFERENCES locations(id)
   )
 SQL
+
+# If one doesn't already exist, create a houses table with id, address, area and price
+create_houses_table = <<-SQL
+  CREATE TABLE IF NOT EXISTS houses(
+    id INTEGER PRIMARY KEY,
+    address VARCHAR(255),
+    price INT,
+    area_id INT,
+    FOREIGN KEY (area_id) REFERENCES locations(id)
+  )
+SQL
