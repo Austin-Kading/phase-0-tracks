@@ -14,4 +14,19 @@ SQL
 
 db.execute(create_table_cmd)
 
-db.execute("INSERT INTO wines (name, vintage) VALUES ('Pinot Gris', 2009)")
+def add_wine(db, name, vintage)
+  puts "You just added #{name} with the vintage year of #{vintage} to the cellar."
+  db.execute("INSERT INTO wines (name, vintage) VALUES (?, ?)", [name, vintage])
+end
+
+def view_cellar(db)
+  wine_cellar = db.execute("SELECT * FROM wines")
+  wine_cellar.each do |id, name, vintage|
+    puts "The wine_cellar currently holds #{vintage} #{name}."
+  end
+end
+
+view_cellar(db)
+
+
+
