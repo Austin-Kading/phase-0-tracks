@@ -14,7 +14,8 @@ SQL
 
 db.execute(create_table_cmd)
 
-def add_wine(db, name, vintage)
+
+def fill_wine_cellar(db, name, vintage)
   puts "You just added #{name} with the vintage year of #{vintage} to the cellar."
   db.execute("INSERT INTO wines (name, vintage) VALUES (?, ?)", [name, vintage])
 end
@@ -42,8 +43,21 @@ def select_by_name(db, name)
   end
 end
 
+# USER INTERFACE
 
-select_by_name(db, "Merlot")
+puts "What kind of wine would you like to fill the cellar with?"
+wine_name = gets.chomp
+
+puts "What vintage year is this wine?"
+wine_vintage = gets.chomp.to_i
+fill_wine_cellar(db, wine_name, wine_vintage)
+puts "-" * 30
+view_cellar(db)
+puts "-" * 30
+
+
+
+
 
 
 
