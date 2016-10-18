@@ -35,7 +35,17 @@ def select_by_vintage(db, vintage)
   end
 end
 
-select_by_vintage(db, 2009)
+def select_by_name(db, name)
+  name_selection = db.execute("SELECT * FROM wines WHERE name=?", [name])
+  name_selection.each do |id, name, vintage|
+    puts "Very nice choice! I recommend our #{vintage} #{name}."
+  end
+end
+
+
+select_by_name(db, "Merlot")
+
+
 
 
 
