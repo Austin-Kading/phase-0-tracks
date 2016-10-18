@@ -26,7 +26,16 @@ def view_cellar(db)
   end
 end
 
-view_cellar(db)
+def select_by_vintage(db, vintage)
+  vintage_selection = db.execute("SELECT * FROM wines WHERE vintage=?", [vintage])
+  vintage_selection.each do |id, name|
+    puts "I can see you are a person of class and are familiar with good vintage years."
+    puts "So I recommend our #{vintage} #{name}."
+    puts "\n"
+  end
+end
+
+select_by_vintage(db, 2009)
 
 
 
